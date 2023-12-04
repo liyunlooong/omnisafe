@@ -27,7 +27,7 @@ from omnisafe.algorithms.on_policy import (
     simmer,
 )
 from omnisafe.algorithms.on_policy.base import PPO, TRPO, NaturalPG, PolicyGradient
-from omnisafe.algorithms.on_policy.early_terminated import PPOEarlyTerminated, TRPOEarlyTerminated, PPOLagET
+from omnisafe.algorithms.on_policy.early_terminated import PPOEarlyTerminated, TRPOEarlyTerminated, PPOLagET, CPPOPIDET
 from omnisafe.algorithms.on_policy.first_order import CUP, FOCOPS
 from omnisafe.algorithms.on_policy.naive_lagrange import PDO, RCPO, PPOLag, TRPOLag
 from omnisafe.algorithms.on_policy.penalty_function import IPO, P3O

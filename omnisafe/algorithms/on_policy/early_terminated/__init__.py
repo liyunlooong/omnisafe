@@ -17,10 +17,12 @@
 from omnisafe.algorithms.on_policy.early_terminated.ppo_early_terminated import PPOEarlyTerminated
 from omnisafe.algorithms.on_policy.early_terminated.trpo_early_terminated import TRPOEarlyTerminated
 from omnisafe.algorithms.on_policy.early_terminated.ppo_lag_early_terminated import PPOLagET
+from omnisafe.algorithms.on_policy.early_terminated.cppo_pid_early_terminated import CPPOPIDET
 
 
 __all__ = [
     'TRPOEarlyTerminated',
     'PPOEarlyTerminated',
     'PPOLagET',
+    'CPPOPIDET',
 ]

@@ -43,6 +43,7 @@ from omnisafe.algorithms.offline import BCQ, CCRR, CRR, VAEBC, BCQLag, COptiDICE
 from omnisafe.algorithms.on_policy import (
     CPO,
     CPPOPID,
+    CPPOPIDET,
     CUP,
     FOCOPS,
     PCPO,
