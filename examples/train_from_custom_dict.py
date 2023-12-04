@@ -34,7 +34,7 @@ if __name__ == '__main__':
         },
     }
 
-    agent = omnisafe.Agent('PPOLag', env_id, custom_cfgs=custom_cfgs)
+    agent = omnisafe.Agent('PPOLagET', env_id, custom_cfgs=custom_cfgs)
     agent.learn()
 
     agent.plot(smooth=1)

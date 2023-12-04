@@ -22,7 +22,7 @@ from omnisafe.utils import distributed
 
 
 @registry.register
-class PPOEarlyTerminated(PPOLag):
+class PPOLagET(PPOLag):
     """The Early terminated version of the PPO algorithm.
 
     A simple combination of the Early terminated RL and the Proximal Policy Optimization algorithm.
