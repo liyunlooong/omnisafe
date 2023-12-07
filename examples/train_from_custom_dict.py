@@ -18,7 +18,7 @@ import omnisafe
 
 
 if __name__ == '__main__':
-    env_id = 'SafetyPointGoal1-v0'
+    env_id = 'SafetyCarButton1-v0'
     custom_cfgs = {
         'train_cfgs': {
             'total_steps': 1024000,

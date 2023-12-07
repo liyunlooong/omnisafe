@@ -22,7 +22,7 @@ from torch.utils.data import DataLoader, TensorDataset
 
 from omnisafe.algorithms import registry
 from omnisafe.algorithms.on_policy.base.ppo import PPO
-from omnisafe.common.lagrange import Lagrange
+from omnisafe.common.pid_lagrange import PIDLagrangian
 from omnisafe.utils import distributed
 
 
@@ -45,7 +45,7 @@ class CUPPID(PPO):
         Here we additionally initialize the Lagrange multiplier.
         """
         super()._init()
-        self._lagrange: Lagrange = Lagrange(**self._cfgs.lagrange_cfgs)
+        self._lagrange: PIDLagrangian = PIDLagrangian(**self._cfgs.lagrange_cfgs)
 
     def _init_log(self) -> None:
         """Log the CUP specific information.
@@ -194,7 +194,7 @@ class CUPPID(PPO):
 
         self._logger.store(
             {
-                'Metrics/LagrangeMultiplier': self._lagrange.lagrangian_multiplier.item(),
+                'Metrics/LagrangeMultiplier': self._lagrange.lagrangian_multiplier,
                 'Train/SecondStepStopIter': final_steps,  # pylint: disable=undefined-loop-variable
             },
         )
