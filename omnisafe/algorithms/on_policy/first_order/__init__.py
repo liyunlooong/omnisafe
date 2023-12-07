@@ -16,9 +16,11 @@
 
 from omnisafe.algorithms.on_policy.first_order.cup import CUP
 from omnisafe.algorithms.on_policy.first_order.focops import FOCOPS
+from omnisafe.algorithms.on_policy.first_order.cup_pid import CUPPID
 
 
 __all__ = [
     'CUP',
     'FOCOPS',
+    'CUPPID',
 ]
