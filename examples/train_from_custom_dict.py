@@ -21,7 +21,7 @@ if __name__ == '__main__':
     env_id = 'SafetyCarButton1-v0'
     custom_cfgs = {
         'train_cfgs': {
-            'total_steps': 1024000,
+            'total_steps': 2048,
             'vector_env_nums': 1,
             'parallel': 1,
         },
@@ -34,9 +34,9 @@ if __name__ == '__main__':
         },
     }
 
-    agent = omnisafe.Agent('CUPPID', env_id, custom_cfgs=custom_cfgs)
+    agent = omnisafe.Agent('TRPOPID', env_id, custom_cfgs=custom_cfgs)
     agent.learn()
 
     agent.plot(smooth=1)
-    agent.render(num_episodes=1, render_mode='rgb_array', width=256, height=256)
+    agent.render(num_episodes=5, render_mode='rgb_array', width=500, height=500)
     agent.evaluate(num_episodes=1)
